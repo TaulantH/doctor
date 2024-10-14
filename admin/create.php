@@ -1,7 +1,6 @@
 <?php
 session_start();
 
-// Check session and role if needed
 
 require_once "../db_connect.php";
 
@@ -40,32 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['add_doctor'])) {
         body {
             background-color: white;
         }
-        .container2 {
-            background-color: #FFFCF2;
-            border-radius: 10px;
-            padding: 30px;
-            max-width: 500px;
-            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
-            margin: 0 auto;
-        }
-        .container2 h2 {
-            text-align: center;
-        }
-        .form-control {
-            background-color: #CCC5B9;
-            border: none;
-            border-radius: 5px;
-        }
-        .btn-primary {
-            text-align: center;
-            background-color: #EB5E28;
-            border: none;
-            color: #FEFAE0;
-            border-radius: 5px;
-        }
-        .btn-primary:hover {
-            background-color: #D4A373;
-        }
+
         .alert {
             background-color: #FAEDCD;
             border: 1px solid #D4A373;
@@ -76,14 +50,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['add_doctor'])) {
 <body>
     <?php include_once "../components/navbarAdmin.php"; ?>
 
-    <div class="container2">
+    <div class="container mt-5">
         <h2>Add Doctor</h2>
         <form method="post" action="">
-            <div class="mb-3">
+        <div class="form-group">
                 <label for="name" class="form-label">Name</label>
                 <input type="text" class="form-control" id="name" name="name" required>
             </div>
-            <div class="mb-3">
+            <div class="form-group">
                 <label for="specialization" class="form-label">Specialization</label>
                 <input type="text" class="form-control" id="specialization" name="specialization" required>
             </div>

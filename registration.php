@@ -158,8 +158,8 @@ if (isset($_POST["sign-up"])) {
 .card {
     background-color: rgba(255, 255, 255, 0.9);
     color: black;
-    margin-top: 20px; /* Adjust to align center vertically */
-    margin-bottom: 20px; /* Adjust to align center vertically */
+    margin-top: 20px; 
+    margin-bottom: 20px;
     padding: 20px;
     border-radius: 15px;
 }
@@ -167,11 +167,10 @@ if (isset($_POST["sign-up"])) {
     display: block;
 }
 .form-control, .btn, .form-check-input, .form-check-label {
-    font-size: 0.8rem; /* Smaller font size */
+    font-size: 0.8rem; 
 }
 
 
-/* This is to ensure that the page content fits within a typical viewport height */
 @media (min-width: 992px) {
     .card {
         margin-top: 3rem;
@@ -198,14 +197,14 @@ if (isset($_POST["sign-up"])) {
                                     <div class="col-md-6 mb-4">
                                         <div class="form-group">
                                             <label for="fname" class="form-label">First name</label>
-                                            <input type="text" class="form-control" id="firstame" name="fname" placeholder="First name" value="<?= $fname ?>">
+                                            <input type="text" class="form-control" id="firstame" name="fname" placeholder="First name" >
                                             <span class="text-danger"><?= $fnameError ?></span>
                                         </div>
                                     </div>
                                     <div class="col-md-6 mb-4">
                                         <div class="form-group">
                                             <label for="fname" class="form-label">Last name</label>
-                                            <input type="text" class="form-control" id="lastame" name="last_name" placeholder="Last name" value="<?= $lname ?>">
+                                            <input type="text" class="form-control" id="lastame" name="last_name" placeholder="Last name">
                                             <span class="text-danger"><?= $lnameError ?></span>
                                         </div>
                                     </div>
@@ -216,7 +215,7 @@ if (isset($_POST["sign-up"])) {
                                     <div class="col-md-6 mb-4 d-flex align-items-center">
                                         <div class="form-group datepicker w-100">
                                             <label for="date" class="form-label">Date of birth</label>
-                                            <input type="date" class="form-control" id="date" name="date_of_birth" value="<?= $date_of_birth ?>">
+                                            <input type="date" class="form-control" id="date" name="date_of_birth" >
                                             <span class="text-danger"><?= $dateError ?></span>
                                         </div>
                                     </div>
@@ -246,7 +245,7 @@ if (isset($_POST["sign-up"])) {
 
                                         <div class="form-group">
                                             <label for="username" class="form-label">Username</label>
-                                            <input type="text" class="form-control" id="username" name="username" placeholder="Username" value="<?= $username ?>">
+                                            <input type="text" class="form-control" id="username" name="username" placeholder="Username">
                                             <span class="text-danger"><?= $usernameError ?></span>
                                         </div>
                                     </div>
@@ -254,7 +253,7 @@ if (isset($_POST["sign-up"])) {
                                     <div class="col-md-6 mb-4 pb-2">
                                         <div class="form-group">
                                             <label for="email" class="form-label">Email address</label>
-                                            <input type="email" class="form-control" id="email" name="email" placeholder="Email address" value="<?= $email ?>">
+                                            <input type="email" class="form-control" id="email" name="email" placeholder="Email address">
                                             <span class="text-danger"><?= $emailError ?></span>
                                         </div>
                                     </div>
@@ -313,8 +312,8 @@ if (isset($_POST["sign-up"])) {
 
                         <!-- Submit Button and Login Link -->
                         <div class="mt-4 pt-2 pb-2">
-                            <button name="sign-up" type="submit" class="btn btn-light btn-lg createBtn">Create account</button>
-                            <span class="">Already have an account? <a href="login.php" class="textColor">Log in here</a></span>
+                            <button name="sign-up" type="submit" class="btn btn-outline-dark btn-lg px-5 mt-3 loginBtn">Create account</button>
+                            <span class="">Already have an account? <a href="login.php" class="text-black-50 fw-bold color">Log in here</a></span>
                         </div>
 
                         </form>

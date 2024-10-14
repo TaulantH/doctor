@@ -3,9 +3,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hero</title>
     <style>
         
@@ -31,7 +31,8 @@
             transform: translate(-50%, -50%);
             /* height: 30vh; */
             width: 40vw;
-            background: #403D39;
+            background: #5dc0d7;
+            opacity: 0.9;
         }
         .containerBorder{
             height:95%;
@@ -44,7 +45,7 @@
             
         }
         .containerBorder h1{
-            color: #CCC5B9;
+            color: black;
             font-size: 70px;
             margin: 0px 5px 0px 5px
         }
@@ -74,6 +75,20 @@
             .containerHero{
                 width: 90%;
             }
+            .containerBorder h1{
+            color: black;
+            font-size: 40px;
+            margin: 0px 5px 0px 5px
+        } }
+        @media(max-width: 350px){
+            .containerHero{
+                width: 90%;
+            }
+            .containerBorder h1{
+            color: black;
+            font-size: 32px;
+            margin: 0px 5px 0px 5px
+        }
         }
     </style>
 </head>

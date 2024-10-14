@@ -1,7 +1,5 @@
 <?php
-   //check session
     
-
     if(isset($_SESSION['user'])){
         header("Location: ../login.php");
     }
@@ -9,7 +7,7 @@
         header("Location: ../login.php");
     }
 
-    $doctorId = isset($_GET['doctor_id']) ? $_GET['doctor_id'] : 1; // Set a default value, change as needed
+    $doctorId = isset($_GET['doctor_id']) ? $_GET['doctor_id'] : 1; 
 
 ?>
 <!DOCTYPE html>
@@ -18,9 +16,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= include_once "brand.php"; ?></title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <style>
-   *{
+  *{
             padding: 0;
             margin: 0;
             text-decoration: none;
@@ -63,6 +64,8 @@
         nav ul li a {
             color: black;
             font-size: 17px;
+            text-decoration: none;
+
         }
 
         a:hover{
@@ -106,7 +109,7 @@
                 position: fixed;
                 width: 100%;
                 height: 100vh;
-                background: #CCC5B9;
+                background-color: #dfe3f4;
                 top: 80px;
                 left: -100%;
                 text-align: center;
@@ -126,7 +129,7 @@
 
             }
             .checkBtn{
-                color: black;
+                color: #CCC5B9;
             }
             a:hover{
                 color: rgba(64, 61, 57, 0.7)
@@ -147,15 +150,18 @@
 <!-- navbar -->
 
 <nav>
+<input type="checkbox" id="check">
+        <label for="check" class="checkBtn">
+            <i class="fa fa-bars"></i>
+        </label>
         <ul>
 			<li>
-      <li><a class="nav-link textColor" href="../dashboard.php">Dashboard</a></li>
+      <li><a href="../dashboard.php">Dashboard</a></li>
         </li>
-     <!-- Modify the href attribute to include the doctor_id -->
-     <li ><a class="nav-link textColor" href="../upComingAppointments.php?doctor_id=0">Upcoming Appointments</a></li>
+     <li ><a href="../upComingAppointments.php?doctor_id=0">Upcoming Appointments</a></li>
 
 
-        <li><a class="nav-link textColor" href="logout.php?logout">Logout</a></li>
+        <li><a href="logout.php?logout">Logout</a></li>
         
       </ul>
 

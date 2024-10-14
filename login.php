@@ -37,27 +37,6 @@ if (isset($_POST["login"])) {
         $passError = "Password can't be empty!";
     }
 
-    $checkBan = "SELECT expiration_time AS exTime, banlist.ID AS ID FROM banlist JOIN users ON banlist.fk_users = users.id WHERE (email = '$identifier' OR username = '$identifier')";
-    $banResult = $connect->query($checkBan);
-    
-    // if(mysqli_num_rows($banResult) == 1){
-    //     $rowBan = $banResult->fetch_assoc();
-    //     $banID = $rowBan['ID'];
-
-    //     $checktime = "SELECT TIMESTAMPDIFF(MINUTE, NOW(), expiration_time) AS time_difference FROM banlist JOIN users ON banlist.fk_users = users.id WHERE (email = '$identifier' OR username = '$identifier')";
-    //     $resultTime = $connect->query($checktime);
-    //     $remainTime = $resultTime->fetch_assoc();
-
-    //     if($remainTime['time_difference'] <= 1){
-    //         $delBan = "DELETE FROM `banlist` WHERE ID = $banID";
-    //         $connect->query($delBan);
-    //     }else{
-    //         $error = true;
-    //         $banError = "Sorry you are banned for {$remainTime['time_difference']} more minutes";
-    //     }
-      
-    // }
-
     if (!$error) {
         $password = hash("sha256", $password);
 
@@ -102,10 +81,11 @@ if (isset($_POST["login"])) {
             background-repeat: no-repeat;
             background-size: cover;
             background-color: rgb(255, 255, 255);       
-            margin: 0; /* Remove default margin */
-            align-items: center; /* Center vertically */
-            justify-content: center; /* Center horizontally */
+            margin: 0; 
+            align-items: center;
+            justify-content: center;
             overflow: hidden;
+            height: 100vh;
 
         }
         section{
@@ -136,6 +116,35 @@ if (isset($_POST["login"])) {
             color: black;
             border-radius: 10px;
             position: relative;
+            
+        }
+        section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Use 100vh to make it as tall as the viewport */
+    margin: 0 auto; /* Center the section if needed */
+}
+        @media (max-width: 420px) {
+            body{
+                min-width: none;
+            }
+            .card-body {
+                height: 100vh; 
+                padding: 20px; 
+            }
+            .form-outline, .btn, input, label {
+                font-size: 14px;
+            }
+            .loginBtn {
+                padding: 10px 24px;
+            }
+            .container {
+                padding: 0 10px; 
+            }
+            .card {
+                margin: 20px 0;
+            }
         }
     </style>
 </head>
@@ -149,7 +158,7 @@ if (isset($_POST["login"])) {
                         <div class="card-body p-2 text-center">
 
                             <div class="mb-md-5 mt-md-4 pb-5">
-                                <form method="post">
+                                <form method="post" autocomplete="off">
                                     <div class="alert alert-info">
                                         This website is for testing purposes.
                                     </div>
@@ -172,7 +181,7 @@ if (isset($_POST["login"])) {
                                     </button>
 
                                     <p class="mt-4 mb-0 text-black">Don't have an account? <a href="registration.php" class="text-black-50 fw-bold color">Sign Up</a></p>
-                                    <a href="reset_password_request.php" class="text-black-50 fw-bold color">Forgot</a>
+                                    <a href="#" class="text-black-50 fw-bold color">Forgot</a>
                                 </form>
                             </div>
                         </div>
