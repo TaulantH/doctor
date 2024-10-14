@@ -156,9 +156,9 @@
         </label>
         <ul>
 			<li>
-      <li><a href="../dashboard.php">Dashboard</a></li>
+      <li><a href="dashboard.php">Dashboard</a></li>
         </li>
-     <li ><a href="../upComingAppointments.php?doctor_id=0">Upcoming Appointments</a></li>
+     <li ><a href="upComingAppointments.php?doctor_id=0">Upcoming Appointments</a></li>
 
 
         <li><a href="logout.php?logout">Logout</a></li>
